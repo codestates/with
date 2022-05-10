@@ -1,7 +1,7 @@
 ---
-name: Task_Template
-about: Task 이슈카드 마크다운 템플릿
-title: ''
+name: Task Issue Card Template
+about: Task Issue Card Template
+title: "[Task]"
 labels: ''
 assignees: ''
 
