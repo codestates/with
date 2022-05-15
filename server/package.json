@@ -7,7 +7,7 @@
   },
   "scripts": {
     "prestart": "npx sequelize-cli db:migrate",
-    "start": "node index.js"
+    "pop": "node index.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
