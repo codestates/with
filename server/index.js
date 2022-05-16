@@ -18,7 +18,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const app = express();
 
-//const controllers = require('./controllers');
+const controllers = require('./controllers');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,10 +30,10 @@ app.use(
   })
 );
 app.use(cookieParser());
-// app.get('/auth', controllers.auth);
-// app.post('/signup', controllers.signup);
-// app.post('/signin', controllers.signin);
-// app.post('/signout', controllers.signout);
+app.get('/auth', controllers.auth);
+app.post('/signup', controllers.signup);
+app.post('/login', controllers.login);
+app.post('/signout', controllers.signout);
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 
