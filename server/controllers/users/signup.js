@@ -16,6 +16,7 @@ if(!email||!password||!username||!mobile) return res.status(422)
   else if (email !== null && password === password_confirm) {
     delete userInfo.password
     delete req.body.password_confirm
+    delete req.body.password
     return res.status(201).cookie('jwt',accessToken)
   }
 
