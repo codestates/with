@@ -18,8 +18,9 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.get('/auth', controllers.auth);
 app.post('/signup', controllers.signup);
-app.post('/login', controllers.login);
+app.post('/signin', controllers.signin);
 app.post('/signout', controllers.signout);
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
