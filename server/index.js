@@ -18,7 +18,6 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.get('/auth', controllers.auth);
 app.post('/signup', controllers.signup);
 app.post('/login', controllers.login);
 app.post('/signout', controllers.signout);
