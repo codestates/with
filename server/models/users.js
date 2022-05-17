@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasMany(models.items, { foreignKey: 'user_id', sourceKey: 'id' });
+      this.hasMany(models.posts, { foreignKey: 'user_id', sourceKey: 'id' });
     }
   }
   users.init({
@@ -18,47 +18,47 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     name: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     email: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     password: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     github_url: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     user_comment: {
       allowNull: false,
-      type: Sequelize.TEXT
+      type: DataTypes.TEXT
     },
     email_chk: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     bookmark: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     admin: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     createdAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     },
     updatedAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     }
   }, {
     sequelize,
