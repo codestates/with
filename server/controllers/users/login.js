@@ -3,7 +3,7 @@ const { generateAccessToken, sendAccessToken } = require('../tokenFunctions');
 
 module.exports = async (req, res) => {
   const {email, password} = req.body
-  const userInfo=await user.findOne({where : {email,password}})
+  const userInfo = await user.find({where : {email, password}})
 
   // if(userInfo.email !==null && userInfo.password !== null) {
   //   return res.status(200).json()

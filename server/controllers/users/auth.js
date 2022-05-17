@@ -3,7 +3,9 @@ const { isAuthorized } = require('../tokenFunctions');
 
 module.exports = async (req, res) => {
 
-  if (!req.headers.cookie) return res.status(401).send({data: null, message: 'not authorized'})
+  if (!req.headers.cookie) return res.status(401).send({
+    data: null, message: 'not authorized'
+  })
 
   const accessTokenData = isAuthorized(req);
 

@@ -7,8 +7,9 @@
   },
   "scripts": {
     "start": "nodemon index.js",
-    "pretest": "npx sequelize-cli db:migrate",
-    "test": "npx sequelize-cli db:seed:all"
+    "debug": "node --inspect index.js",
+    "setdb": "npx sequelize db:drop && npx sequelize db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    
   },
   "dependencies": {
     "concurrently": "^7.2.0",
