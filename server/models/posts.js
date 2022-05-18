@@ -18,51 +18,51 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     user_id: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     team_name: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     introduction: {
       allowNull: false,
-      type: Sequelize.TEXT
+      type: DataTypes.TEXT
     },
     qualification: {
       allowNull: false,
-      type: Sequelize.TEXT
+      type: DataTypes.TEXT
     },
     period: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     contact: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     post_count: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     applicant_count: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     user_applicant: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     createdAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     },
     updatedAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     }
   }, {
     sequelize,
