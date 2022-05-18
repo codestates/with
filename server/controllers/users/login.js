@@ -1,9 +1,29 @@
-const { user } = require('../../models');
+// const { users } = require('../../models');
+// const { generateAccessToken, sendAccessToken } = require('../tokenFunctions');
+
+// module.exports = async (req, res) => {
+
+//   const {email, password} = req.body
+
+//   const userInfo = await users.findAll({
+//     where: {email, password}
+//   })
+
+//   if (!userInfo) return res.status(404).send('invalid user');
+
+//   delete userInfo.password
+
+//   const accessToken = generateAccessToken(userInfo.dataValues)
+
+//   sendAccessToken(res, accessToken)
+// };
+
+const { users } = require('../../models');
 const { generateAccessToken, sendAccessToken } = require('../tokenFunctions');
 
 module.exports = async (req, res) => {
   const {email, password} = req.body
-  const userInfo = await user.find({where : {email, password}})
+  const userInfo = await users.findAll({where : {email,password}})
 
   // if(userInfo.email !==null && userInfo.password !== null) {
   //   return res.status(200).json()
