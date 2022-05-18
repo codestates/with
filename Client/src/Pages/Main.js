@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 import Header from '../Components/Header.js';
-import Post from '../Components/Post.js';
+import Post from '../Components/Post';
 import PostUploadModal from '../Components/PostUploadModal.js';
 // import dummyData from '../../Public/dummyData.js'
 
