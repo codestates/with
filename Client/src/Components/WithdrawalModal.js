@@ -41,7 +41,7 @@ const PasswordInput = styled.input`
   width: 220px;
 `;
 const Button = styled.button`
-padding : 1px
+padding : 1px;
 margin:10px;
 height: 35px;
 width: 180px;
