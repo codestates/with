@@ -28,4 +28,6 @@ const Post = ({ post }) => {
   
 };
 
+// 깃허브 푸쉬 오류 해결중
+
 export default Post;
