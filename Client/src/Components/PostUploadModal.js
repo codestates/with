@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import './PostUploadModal.css'
+import dummyData from '../Source/dummyData.js'
 
 // Modal을 구현하는데 전체적으로 필요한 CSS
 export const ModalContainer = styled.div`
@@ -33,25 +35,27 @@ export const ModalView = styled.div.attrs(props => ({
 // TODO : Modal창 CSS를 구현합니다.
   `
   justify-content: center;
-  align-items : center;
+  align-items : left;
   display : flex;
-  height : 300px;
-  width : 500px;
+  height : 40em;
+  width : 20em;
   background-color: white;
   border-radius: 1rem;
   flex-direction: column;
   position : relative; 
   color : purple;
+  padding: 1.5em;
   `;
 
 export const closeButton = styled.button`
 background-color: transparent;
 border-color: blue;
+align-items: right;
 `;
 
 const PostUploadModal = () => {
   // 새로 게시글을 작성하고 업로드 할 수 있게 구현
-  const [posts, newPost] = useState('');
+  const [posts, newPost] = useState(dummyData);
   // const [user, userID] = useState('');
   const [info, teamInfo] = useState('');
   const [task, teamTask] = useState('');
@@ -110,32 +114,32 @@ const PostUploadModal = () => {
         <div className="postForm_wrapper">
           <div className="postForm_inputContainer">
             <div className="postForm_inputWrapper">
-              <div classNmae="postForm-input">
-                <text
+              <div className="postForm_input">
+                팀 소개<br/>
+                <textarea
                   placeholder="팀에 대해 간략히 적어주세요"
-                  className="postForm_input--teamInfo"
-                  onChange={handleChangeTeam}
-                  >팀 소개</text>
+                  className="postForm_inputArea_teamInfo"
+                  onChange={handleChangeTeam}/><br/>
+                주요 업무<br/>  
                   <textarea
                     placeholder="업무에 대해 설명해주세요"
-                    className="postForm_input--task"
-                    onChange={handleChangeTask}
-                  >주요 업무</textarea>
+                    className="postForm_inputArea_task"
+                    onChange={handleChangeTask}/><br/>
+                  자격요건<br/>
                   <textarea
                     placeholder="자격요건을 설명해주세요"
-                    className="postForm_input--qualification"
-                    onChange={handleChangeQualification}
-                  >자격 요건</textarea>
-                  <text
+                    className="postForm_inputArea_qualification"
+                    onChange={handleChangeQualification}/><br/>
+                  지원기간<br/>
+                  <textarea
                     placeholder="지원 기간을 작성해주세요"
-                    className="postForm_input--period"
-                    onChange={handleChangePeriod}
-                  >지원 기간</text>
-                  <text
+                    className="postForm_inputArea_period"
+                    onChange={handleChangePeriod}/><br/>
+                  연락처<br/>
+                  <textarea
                     placeholder="연락처를 입력해주세요"
-                    className="postForm_input--contact"
-                    onChange={handleChangeContact}
-                  >연락처</text>
+                    className="postForm_inputArea_contact"
+                    onChange={handleChangeContact}/>
               </div>
               <div className="postForm_submit">
                 <button className="postForm_submitButton"
