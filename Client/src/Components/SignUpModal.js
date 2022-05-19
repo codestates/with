@@ -53,7 +53,7 @@ const ButtonBoxSignUp = styled.div`
   height: 70px;
 `;
 const SignUpButton = styled.button`
-  padding : 1px
+  padding : 1px;
   height: 35px;
   width: 268px;
   border-radius: 5px;
