@@ -3,10 +3,10 @@
 // 그 후 App.js에 가져와서 사용하기
 
 import React, { useState } from 'react';
-import Header from './Components/Header.js';
-import Post from './Components/Post';
+import Header from '../Components/Header.js';
+import Post from '../Components/Post';
 import PostUploadModal from '../Components/PostUploadModal.js';
-import dummyData from '../../Public/dummyData.js'
+import dummyData from '../Source/dummyData.js';
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,18 +14,18 @@ const Main = () => {
   const openPostUploadModal = () => {
     setIsOpen(!isOpen)
   };
-
-  const [posts, newPost] = useState(dummyData);
   return (
     <>
       <Header />
       <button className="postUpload" onClick={(openPostUploadModal)}>
-        등록하기</button>
-        {/*회원 가입 여부에 따라 업로드모달 열어주기도 넣어야..*/
-        (isOpen ? <PostUploadModal />: null)
-        }
+          등록하기</button>
+          {/*회원 가입 여부에 따라 업로드모달 열어주기도 넣어야..*/
+          (isOpen ? <PostUploadModal />: null)
+          }
       <div className="post_area">
-        {posts.map(el => <Post post = {el} key = {el.id} />)}
+        <div className="post_list">
+          {dummyData.map(el => <Post post = {el} key = {el.id} />)}
+        </div>
       </div>
     </>
   );

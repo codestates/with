@@ -8,11 +8,10 @@
   "scripts": {
     "start": "nodemon index.js",
     "debug": "node --inspect index.js",
+    "dev": "concurrently \"npm run start\" \"npm run start --prefix ../Client\"",
     "setdb": "npx sequelize db:drop && npx sequelize db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
-    
   },
   "dependencies": {
-    "concurrently": "^7.2.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -24,6 +23,7 @@
     "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
+    "concurrently": "^7.2.0",
     "nodemon": "^2.0.16"
   }
 }

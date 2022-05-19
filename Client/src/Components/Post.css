@@ -1,14 +1,26 @@
 .post {
+  display: flex;
   padding: 0.5rem 1rem;
 }
+
 .post_wrap {
-  background-image: '../../../Public/post_it';
-  background-size: 30% 30%;
-  background-repeat: no-repeat;
+  position: relative;
 }
+
+.post_wrap img {
+  width: 400px;
+  vertical-align: middle;
+}
+
 .post_content {
-  /*white-space: pre-wrap;*/
+  position: absolute;
+  text-align: center;
+}
+/*.post_wrap .post_content {
+  white-space: pre-wrap;
+  position: absolute;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+  z-index: 2;
+}*/
