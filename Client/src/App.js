@@ -1,17 +1,17 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-// import Header from './Components/Header';
+// import { BrowserRouter } from "react-router-dom";
+import Header from './Components/Header';
 import Main from './Pages/Main';
+// import WithdrawalModal from "./Components/WithdrawalModal";
+// import MyPage from './Pages/MyPage';
+// import SignUp from "./Components/SignUpModal";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <main>
-          <Main />
-        </main>
-      </div>
-    </BrowserRouter>
-  )
+    <div className="App">
+      <Header />
+      <Main />
+    </div>
+  );
 }
 export default App;
