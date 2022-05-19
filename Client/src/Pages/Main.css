@@ -1,0 +1,14 @@
+.postUpload {
+  position: relative;
+  left: 100px;
+}
+
+.post_area {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.post_list {
+
+}

@@ -1,11 +1,15 @@
 import React from 'react';
 import './Post.css';
+import postit from '../Source/post_it.png'
 
 const Post = ({ post }) => {
 
   return (
     <li className="post" id={post.id}>
-      <div className="post_wrap">  
+      <div className="post_wrap">
+        <div className="postit_img">
+          <img src={postit} alt=""/>
+        </div>  
         <div className="post_content">
           <div className="post_info">
             팀 소개
