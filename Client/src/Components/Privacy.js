@@ -51,7 +51,7 @@ const ButtonBox = styled.div`
   padding-left: 237px;
 `;
 const Button = styled.button`
-padding : 1px
+padding : 1px;
   height: 35px;
   width: 150px;
   border-radius: 5px;
